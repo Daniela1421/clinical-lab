@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar variant="light" type="light" class="mb-4" style="background-color: #e3f2fd;">
-      <b-container>
+      <b-container fluid>
         <b-navbar-brand href="#">🧪 Laboratorio clínico</b-navbar-brand>
         <b-navbar-nav>
           <b-nav-item to="/">Registrar Paciente</b-nav-item>
@@ -11,7 +11,7 @@
       </b-container>
     </b-navbar>
 
-    <b-container>
+    <b-container fluid>
       <router-view />
     </b-container>
   </div>

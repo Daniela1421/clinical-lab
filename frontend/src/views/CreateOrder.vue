@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
-    <h2 class="mb-4">Crear Orden de Exámenes</h2>
+  <div class="container-fluid card card-body">
+    <h4 class="mb-4">Crear Orden de Exámenes</h4>
 
     <form @submit.prevent="crearOrden">
       <div class="form-group">
         <label>Documento del paciente:</label>
         <input v-model="documento" type="text" class="form-control" required />
-        <button class="btn btn-secondary mt-2" @click.prevent="buscarPaciente">Buscar</button>
+        <button class="btn btn-primary btn-md mt-2" @click.prevent="buscarPaciente">Buscar</button>
       </div>
 
       <div v-if="mensaje" :style="{ color: mensajeColor }" class="mt-3">
@@ -115,7 +115,6 @@ export default {
 
 <style scoped>
 .container {
-  max-width: 600px;
   margin: auto;
   padding: 1rem;
   border: 1px solid #ddd;
