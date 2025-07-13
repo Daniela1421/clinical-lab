@@ -18,6 +18,9 @@
       </b-form-group>
 
       <b-button type="submit" variant="primary">Registrar</b-button>
+      <p v-if="mensaje" :style="{ color: mensajeColor, marginTop: '1rem' }">
+        {{ mensaje }}
+      </p>
     </b-form>
   </b-card>
 </template>
@@ -33,12 +36,34 @@ const paciente = ref({
   genero: ''
 })
 
+const mensaje = ref('')
+const mensajeColor = ref('green')
+
 const registrarPaciente = async () => {
+  const soloNumeros = /^[0-9]+$/
+  if (!soloNumeros.test(paciente.value.documento)) {
+    mensaje.value = 'El documento debe contener solo números'
+    mensajeColor.value = 'red'
+    return
+  }
+
   try {
     await axios.post('http://localhost:8000/pacientes/', paciente.value)
-    alert('Paciente registrado')
+    mensaje.value = 'Paciente registrado exitosamente'
+    mensajeColor.value = 'green'
+    limpiarFormulario()
   } catch (error) {
-    alert('Error al registrar')
+    mensaje.value = 'Error al registrar paciente'
+    mensajeColor.value = 'red'
+  }
+}
+
+const limpiarFormulario = () => {
+  paciente.value = {
+    nombre_completo: '',
+    documento: '',
+    fecha_nacimiento: '',
+    genero: ''
   }
 }
 </script>

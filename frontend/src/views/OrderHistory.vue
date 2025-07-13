@@ -14,14 +14,9 @@
         </b-col>
       </b-form>
 
-      <b-alert
-        v-if="mensaje"
-        :variant="mensajeColor"
-        class="mt-3"
-        dismissible
-      >
+      <p v-if="mensaje" :style="{ color: mensajeColor, marginTop: '1rem' }">
         {{ mensaje }}
-      </b-alert>
+      </p>
     </b-card>
 
     <b-card v-if="ordenes.length" header="Órdenes encontradas" class="mb-4">
@@ -69,7 +64,7 @@ export default {
       ordenes: [],
       detalleOrden: null,
       mensaje: "",
-      mensajeColor: "danger",
+      mensajeColor: "red",
       showModal: false,
       fields: [
         { key: "numero_orden", label: "Número de Orden" },
@@ -87,13 +82,9 @@ export default {
       try {
         const res = await api.get(`/ordenes/paciente/${this.documento}`);
         this.ordenes = res.data;
-        this.mensaje = this.ordenes.length
-          ? ""
-          : "No se encontraron órdenes para este paciente.";
-        this.mensajeColor = "warning";
       } catch (error) {
-        this.mensaje = "Error al buscar las órdenes del paciente.";
-        this.mensajeColor = "danger";
+        this.mensaje = "Paciente no encontrado";
+        this.mensajeColor = "red";
       }
     },
     async verDetalle(idOrden) {
@@ -103,7 +94,7 @@ export default {
         this.showModal = true;
       } catch (error) {
         this.mensaje = "Error al cargar el detalle de la orden.";
-        this.mensajeColor = "danger";
+        this.mensajeColor = "red";
       }
     },
     formatearFecha(fecha) {
