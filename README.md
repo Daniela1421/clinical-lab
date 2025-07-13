@@ -53,9 +53,9 @@ docker-compose up -d
 
 ### Opción B: Tener MySQL instalado localmente (sin Docker)
 
-1. Asegúrate de tener **MySQL Server** instalado en tu sistema.
+a. Asegúrate de tener **MySQL Server** instalado en tu sistema.
 
-2. Ejecuta el script SQL para crear la base de datos y las tablas. Desde la raíz del proyecto, ejecuta el siguiente comando:
+b. Ejecuta el script SQL para crear la base de datos y las tablas. Desde la raíz del proyecto, ejecuta el siguiente comando:
 
   ```
     mysql -u tu_usuario_mysql -p < ./mysql-init/esquema_laboratorio_clinico.sql
@@ -63,7 +63,7 @@ docker-compose up -d
 
 Este script creará la base de datos, sus tablas y algunos datos de prueba.
 
-3. Crea un archivo .env dentro de la carpeta backend/ con el siguiente contenido:
+c. Crea un archivo .env dentro de la carpeta backend/ con el siguiente contenido:
 
   ```
     DB_HOST=localhost
