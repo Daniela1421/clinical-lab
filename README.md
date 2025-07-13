@@ -30,12 +30,12 @@ Incluye backend en **FastAPI + SQLAlchemy** y frontend en **Vue 3 + BootstrapVue
 
 ### Backend (FastAPI)
 
-# 1. Ir a la carpeta del backend
+#### 1. Ir a la carpeta del backend
 ```
   cd backend
 ```
 
-# 2. Crear entorno virtual e instalar dependencias
+#### 2. Crear entorno virtual e instalar dependencias
 ```
 python -m venv venv
 source venv/bin/activate   # Linux/macOS
@@ -44,9 +44,9 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 ```
 
-# 3. Configurar base de datos
+#### 3. Configurar base de datos
 
-# Opción A: Usar Docker (recomendado) ejecutar: 
+### Opción A: Usar Docker (recomendado) ejecutar: 
 ```
 docker-compose up -d
 ```
@@ -73,7 +73,7 @@ Este script creará la base de datos, sus tablas y algunos datos de prueba.
     DB_NAME=laboratorio_clinico
   ```
 
-# 4. Ejecutar el servidor
+#### 4. Ejecutar el servidor
 uvicorn app.main:app --reload
 
 El backend estará corriendo en:
@@ -81,17 +81,17 @@ El backend estará corriendo en:
 
 ### Frontend (Vue 3)
 
-# 1. Ir a la carpeta del frontend
+#### 1. Ir a la carpeta del frontend
 ```
 cd ../frontend
 ```
 
-# 2. Instalar dependencias
+#### 2. Instalar dependencias
 ```
 npm install
 ```
 
-# 3. Ejecutar el proyecto
+#### 3. Ejecutar el proyecto
 ```
 npm run dev
 ```
