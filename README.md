@@ -3,8 +3,6 @@
 Aplicación web Full Stack para gestionar pacientes, órdenes médicas y exámenes clínicos.  
 Incluye backend en **FastAPI + SQLAlchemy** y frontend en **Vue 3 + BootstrapVue**, siguiendo una arquitectura limpia y escalable.
 
----
-
 ## 🧩 Funcionalidades
 
 ### ✅ Backend (FastAPI + MySQL)
@@ -22,8 +20,6 @@ Incluye backend en **FastAPI + SQLAlchemy** y frontend en **Vue 3 + BootstrapVue
 - Visualización de detalle de orden (con modal)
 - Interfaz sencilla, funcional y coherente
 
----
-
 
 ## 🚀 Cómo ejecutar el proyecto localmente
 
@@ -32,9 +28,7 @@ Incluye backend en **FastAPI + SQLAlchemy** y frontend en **Vue 3 + BootstrapVue
 - Node.js y npm
 - Docker (opcional, pero recomendado para MySQL)
 
----
-
-### 🔙 Backend (FastAPI)
+### Backend (FastAPI)
 
 # 1. Ir a la carpeta del backend
 ```
@@ -85,7 +79,7 @@ uvicorn app.main:app --reload
 El backend estará corriendo en:
 📡 http://localhost:8000
 
-### 🔙 Frontend (Vue 3)
+### Frontend (Vue 3)
 
 # 1. Ir a la carpeta del frontend
 ```
@@ -117,8 +111,6 @@ La interfaz estará disponible en:
 - `GET /examenes/`: Listar exámenes disponibles  
 - `POST /examenes/`: Crear exámenes
 
----
-
 
 ## 🧠 Recomendaciones de mejora
 
@@ -128,7 +120,6 @@ La interfaz estará disponible en:
 - Filtro por fechas y estado
 - Dashboard resumen
 
----
 
 ## 👩‍💻 Autora
 
