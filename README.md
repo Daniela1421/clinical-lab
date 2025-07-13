@@ -74,8 +74,9 @@ c. Crea un archivo .env dentro de la carpeta backend/ con el siguiente contenido
   ```
 
 #### 4. Ejecutar el servidor
-uvicorn app.main:app --reload
-
+   ```
+    uvicorn app.main:app --reload
+   ```
 El backend estará corriendo en:
 📡 http://localhost:8000
 
